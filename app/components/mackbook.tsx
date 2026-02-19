@@ -4,7 +4,7 @@ import { MacbookScroll } from "@/components/ui/macbook-scroll";
 export function MacbookScrollDemo() {
   return (
     <div className="w-full overflow-hidden">
-      <MacbookScroll src="/img/github.png" showGradient={false} />
+      <MacbookScroll src="/img/saadatgithub.png" showGradient={false} />
     </div>
   );
 }

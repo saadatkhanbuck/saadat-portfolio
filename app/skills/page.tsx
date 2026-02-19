@@ -27,6 +27,7 @@ import {
   SiSharp,
   SiPostgresql,
   SiMui,
+  SiNextdotjs,
   SiJquery,
   SiNodedotjs,
   SiMongodb,
@@ -34,55 +35,68 @@ import {
 
 import { InfiniteSkillsCards } from "@/components/ui/infinitemovingcard";
 import SkillsHero from "../components/skillshero";
-
 import OurServices from "../components/ourservice";
-import { TrustedCompanies } from "../components/trustedcompanies";
 
 /* ------------------ DATA ------------------ */
 
 const skills = [
-  { name: "ASP.NET C#", icon: SiSharp, category: "Web & Desktop Apps" },
-  { name: "ASP.NET Web API", icon: SiDotnet, category: "Backend API" },
-  { name: "Node.js", icon: SiNodedotjs, category: "Backend" },
-    { name: "Bootstrap", icon: FaBootstrap, category: "UI Framework" },
-  { name: "ASP.NET MVC", icon: SiSharp, category: "Backend" },
-   { name: "jQuery", icon: SiJquery, category: "Frontend" },
-   { name: "MongoDB", icon: SiMongodb, category: "NoSQL" },
-  { name: "Python (Django)", icon: FaPython, category: "Backend" },
-  { name: "Android Development", icon: SiMui, category: "Mobile Apps" },
-  { name: "ADO.NET", icon: SiSharp, category: "Data Access" },
-   { name: "Entity Framework", icon: SiDotnet, category: "ORM" },
-  { name: "React JS", icon: FaReact, category: "Front-end" },
-  { name: "JavaScript", icon: FaJs, category: "Front-end" },
-  { name: "HTML 5", icon: FaHtml5, category: "Front-end" },
-  { name: "CSS 3", icon: FaCss3Alt, category: "Front-end" },
-  { name: "MS SQL Server", icon: FaDatabase, category: "Database" },
-  { name: "ClickHouse", icon: DatabaseIcon, category: "Analytics DB" },
-  { name: "PostgreSQL", icon: SiPostgresql, category: "Database" },
+  { name: "React.js", icon: FaReact, category: "Frontend Framework" },
+  { name: "Next.js", icon: SiNextdotjs, category: "React Framework" },
+  { name: "JavaScript (ES6+)", icon: FaJs, category: "Programming Language" },
+  { name: "TypeScript", icon: CodeIcon, category: "Typed JavaScript" },
+
+  { name: "HTML5", icon: FaHtml5, category: "Markup Language" },
+  { name: "CSS3", icon: FaCss3Alt, category: "Styling" },
+  { name: "Tailwind CSS", icon: SiMui, category: "Utility-first CSS" },
+  { name: "Bootstrap", icon: FaBootstrap, category: "UI Framework" },
+
+  { name: "Responsive UI / UX", icon: LayersIcon, category: "Design" },
+
+  {
+    name: "State Management",
+    icon: DatabaseIcon,
+    category: "App Architecture",
+  },
+  { name: "Context API", icon: DatabaseIcon, category: "React State" },
+  { name: "Redux Basics", icon: DatabaseIcon, category: "State Management" },
+
+  { name: "Reusable Components", icon: BoxIcon, category: "Component Design" },
+  {
+    name: "Component Optimization",
+    icon: SparklesIcon,
+    category: "Performance",
+  },
+
+  { name: "API Integration", icon: CloudIcon, category: "Frontend + Backend" },
+  { name: "REST APIs", icon: CloudIcon, category: "Networking" },
 ];
 
 const tools = [
-  { icon: <LayersIcon />, label: "Xamarin Forms" },
-  { icon: <BarChartIcon />, label: "Telerik Reports" },
-  { icon: <BarChartIcon />, label: "Active Reports" },
-  { icon: <CodeIcon />, label: "Visual Studio" },
-  { icon: <TerminalIcon />, label: "VS Code" },
-  { icon: <CodeIcon />, label: "PyCharm" },
   { icon: <BoxIcon />, label: "Git" },
-  { icon: <CloudIcon />, label: "Azure DevOps" },
-  { icon: <DatabaseIcon />, label: "Docker" },
-  { icon: <WrenchIcon />, label: ".NET Tooling" },
+  { icon: <BoxIcon />, label: "GitHub" },
+  { icon: <TerminalIcon />, label: "VS Code" },
+
+  { icon: <CodeIcon />, label: "REST APIs" },
+  { icon: <DatabaseIcon />, label: "JSON" },
+
+  { icon: <SparklesIcon />, label: "Performance Optimization" },
+  { icon: <WrenchIcon />, label: "API Integration" },
+
+  { icon: <LayersIcon />, label: "UI Debugging" },
+  { icon: <WrenchIcon />, label: "Bug Fixing" },
+
+  { icon: <CloudIcon />, label: "Deployment (Vercel)" },
+  { icon: <CloudIcon />, label: "Environment Variables" },
 ];
 
 /* ------------------ COMPONENT ------------------ */
 
 export default function SkillsDemo() {
   return (
-    <>
-    <SkillsHero/>
-    <section  className="relative overflow-hidden py-16">
+    <div>
+      <SkillsHero/>
+    <section id="skills" className="relative overflow-hidden py-16">
       <div className="max-w-8xl mx-auto px-4 space-y-8">
-
         {/* ===== CORE SKILLS HEADER ===== */}
         <SectionHeader
           icon={<SparklesIcon className="w-6 h-6" />}
@@ -91,11 +105,7 @@ export default function SkillsDemo() {
 
         {/* ===== SKILLS CARDS ===== */}
         <div className="flex items-center justify-center overflow-hidden">
-          <InfiniteSkillsCards
-            skills={skills}
-            direction="right"
-            speed="slow"
-          />
+          <InfiniteSkillsCards skills={skills} direction="right" speed="slow" />
         </div>
 
         {/* ===== TOOLS HEADER ===== */}
@@ -112,9 +122,8 @@ export default function SkillsDemo() {
         </div>
       </div>
     </section>
-    {/* <TrustedCompanies/> */}
     <OurServices/>
-    </>
+    </div>
   );
 }
 
@@ -144,9 +153,7 @@ function Marquee({ direction }: { direction: "left" | "right" }) {
   return (
     <div
       className={`whitespace-nowrap ${
-        direction === "left"
-          ? "animate-marquee-left"
-          : "animate-marquee-right"
+        direction === "left" ? "animate-marquee-left" : "animate-marquee-right"
       }`}
     >
       <div className="flex gap-4 w-fit">

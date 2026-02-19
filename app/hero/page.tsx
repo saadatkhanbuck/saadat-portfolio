@@ -42,7 +42,7 @@ export default function HeroSection() {
             >
               Hello, Its <br />
               <span className="bg-gradient-to-r from-black via-neutral-700 to-neutral-400  dark:bg-gradient-to-r from-neutral-500 via-neutral-400 to-neutral-300 bg-clip-text text-transparent">
-                Akhtar Abbas
+                Saadat Ali
               </span>
             </motion.h1>
 
@@ -56,9 +56,9 @@ export default function HeroSection() {
               <LayoutTextFlip
                 text="I'm a"
                 words={[
-                  "Full Stack Developer",
-                  "Mobile App Developer",
-                  "Desktop Developer",
+                  "Frontend Developer",
+                  "React Js Developer",
+                  "Next Js Developer",
                   "Web Developer",
                 ]}
               />
@@ -86,22 +86,24 @@ export default function HeroSection() {
                 href="/projects"
                 className="group relative inline-flex items-center justify-center border border-gray-900 dark:border dark:border-white gap-2 overflow-hidden rounded-xl bg-neutral-900 px-8 py-3 font-medium text-white transition"
               >
-                  <span className="absolute inset-0 translate-y-full bg-white transition duration-300 group-hover:translate-y-0" />
-                  <span className="relative z-10 flex items-center gap-2 group-hover:text-black">
+                <span className="absolute inset-0 translate-y-full bg-white transition duration-300 group-hover:translate-y-0" />
+                <span className="relative z-10 flex items-center gap-2 group-hover:text-black">
                   View Projects
-                  </span>
-                  <span className="ml-2 inline-block transition group-hover:translate-x-1 hover:text-black">
-                    →
-                  </span>
+                </span>
+                <span className="ml-2 inline-block transition group-hover:translate-x-1 hover:text-black">
+                  →
+                </span>
               </a>
 
               <a
-                href="/Akhtar_Abbas_CV (2).pdf"
-                download="Akhtar-Abbas-CV.pdf"
+                href="/saadat.pdf"
+                download="Saadat-Ali-CV.pdf"
                 className="group relative inline-flex items-center justify-center border border-gray-900 dark:border dark:border-white gap-2 overflow-hidden rounded-xl bg-white px-8 py-3 font-medium text-black transition"
               >
                 <span className="absolute inset-0 translate-y-full bg-black transition duration-300 group-hover:translate-y-0" />
-                <span className="relative z-10 flex items-center gap-2 group-hover:text-white">Download CV</span>
+                <span className="relative z-10 flex items-center gap-2 group-hover:text-white">
+                  Download CV
+                </span>
               </a>
             </motion.div>
 
@@ -113,7 +115,7 @@ export default function HeroSection() {
               className="mt-8 flex items-center justify-center gap-5 md:justify-start"
             >
               <a
-                href="https://github.com/akhtarabbas-909"
+                href="https://github.com/saadatkhanbuck"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg border bg-white/80 p-2 backdrop-blur transition hover:scale-110 text-black dark:text-black dark:hover:text-white hover:bg-black hover:text-white"
@@ -122,7 +124,7 @@ export default function HeroSection() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/akhtarabbas909/"
+                href="https://www.linkedin.com/in/saadat-ali-0a4394348/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg border bg-white/80 p-2 backdrop-blur transition hover:scale-110 text-black dark:text-black dark:hover:text-white hover:bg-black hover:text-white"
@@ -130,14 +132,14 @@ export default function HeroSection() {
                 <Linkedin size={18} />
               </a>
 
-              <a
+              {/* <a
                 href="https://twitter.com/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg border bg-white/80 p-2 backdrop-blur transition hover:scale-110 text-black dark:text-black dark:hover:text-white hover:bg-black hover:text-white"
               >
                 <Twitter size={18} />
-              </a>
+              </a> */}
             </motion.div>
           </div>
 
@@ -162,8 +164,8 @@ export default function HeroSection() {
             <div className="relative h-[260px] w-[260px] md:h-[360px] md:w-[360px] rounded-full bg-white p-0 shadow-2xl transition duration-500 hover:scale-105">
               <div className="relative h-full w-full overflow-hidden rounded-full">
                 <Image
-                  src="/img/akhtar9.jpeg"
-                  alt="Akhtar Abbas"
+                  src="/img/me3.jpeg"
+                  alt="Saadat Ali"
                   fill
                   priority
                   className="object-cover object-top"
@@ -171,7 +173,7 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="absolute -bottom-2 right-10 rounded-lg text-neutral-700 border bg-white px-3 py-1 text-xs font-semibold shadow-md">
-              13+ Years Experience
+              Work Experience Since 2023
             </div>
 
             {/* floating tech (glass) */}

@@ -85,7 +85,7 @@ export const MacbookScroll = ({
             This MacBook preview showcases my
             <br />
             <LinkPreview
-              url="https://github.com/akhtarabbas-909"
+              url="https://github.com/saadatbuk"
               className="inline-flex items-center gap-2 py-3 font-extrabold italic text-blue-400 dark:text-blue-400 hover:underline"
             >
               GitHub Profile
