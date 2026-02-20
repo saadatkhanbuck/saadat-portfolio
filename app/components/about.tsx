@@ -1,8 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiMongodb } from "react-icons/si";
+import { FaReact, FaGithub, FaHtml5, FaCss3Alt } from "react-icons/fa";
+
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+  SiRedux,
+  SiFramer,
+} from "react-icons/si";
 import { useEffect, useRef, useState } from "react";
 
 const fadeUp = {
@@ -57,9 +64,9 @@ function Counter({ to, suffix = "" }: CounterProps) {
 
 export default function About() {
   const stats = [
-    { number: 13, suffix: "+", label: "Years Experience" },
-    { number: 350, suffix: "+", label: "Projects Completed" },
-    { number: 300, suffix: "+", label: "Happy Clients" },
+    { number: 2, suffix: "+", label: "Years Experience Since 2023" },
+    { number: 100, suffix: "+", label: "Projects Completed" },
+    { number: 50, suffix: "+", label: "Happy Clients" },
     { number: "∞", label: "Learning Mode" },
   ];
 
@@ -87,12 +94,12 @@ export default function About() {
           </h1>
 
           <p className="mt-6 text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed max-w-xl text-justify">
-            I am a Fullstack Software Engineer with over a decade of experience
-            designing and delivering scalable, high-performance applications
-            across healthcare, insurance, and finance domains. My expertise
-            spans the Microsoft stack and modern web technologies, enabling me
-            to build end-to-end solutions that are both robust and
-            user-friendly.
+            I am a Frontend Developer with 2+ years of experience since 2023,
+            specializing in building scalable, high-performance, and
+            production-ready web applications. I focus on writing clean,
+            reusable, and maintainable code, optimizing performance, and
+            crafting meaningful user experiences using modern UI engineering
+            standards.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-8">
@@ -130,10 +137,10 @@ export default function About() {
 
             <div className="flex gap-2 mt-5 flex-wrap">
               <span className="text-xs px-3 py-1 rounded-full bg-neutral-200 dark:bg-neutral-800">
-                Fullstack
+                Frontend Developer
               </span>
               <span className="text-xs px-3 py-1 rounded-full bg-neutral-200 dark:bg-neutral-800">
-                13+ yrs
+                2+ yrs
               </span>
               <span className="text-xs px-3 py-1 rounded-full bg-neutral-200 dark:bg-neutral-800">
                 Remote
@@ -186,9 +193,12 @@ export default function About() {
           {[
             { icon: <SiNextdotjs size={24} />, name: "Next.js" },
             { icon: <FaReact size={24} />, name: "React" },
+            { icon: <SiTypescript size={24} />, name: "TypeScript" },
             { icon: <SiTailwindcss size={24} />, name: "Tailwind CSS" },
-            { icon: <FaNodeJs size={24} />, name: "Node.js" },
-            { icon: <SiMongodb size={24} />, name: "MongoDB" },
+            { icon: <SiFramer size={24} />, name: "Framer Motion" },
+            { icon: <SiRedux size={24} />, name: "Redux" },
+            { icon: <FaHtml5 size={24} />, name: "HTML5" },
+            { icon: <FaCss3Alt size={24} />, name: "CSS3" },
             { icon: <FaGithub size={24} />, name: "GitHub" },
           ].map((tech, i) => (
             <div
@@ -245,7 +255,8 @@ export default function About() {
               >
                 <h3 className="font-semibold text-lg mb-2">Feature {i + 1}</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300">
-                  This is a cool interactive card that highlights my skills.
+                  Writing clean, reusable and maintainable frontend code
+                  following best practices.
                 </p>
               </motion.div>
             ))}

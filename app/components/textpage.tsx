@@ -12,14 +12,14 @@ export default function TextPage() {
         <p className="mb-4">
           Check out my{" "}
           <LinkPreview
-            url="https://github.com/akhtarabbas-909"
+            url="https://github.com/saadatkhanbuck"
             className="text-neutral-700 font-bold"
           >
             GitHub profile
           </LinkPreview>{" "}
           and{" "}
           <LinkPreview
-            url="https://www.linkedin.com/in/akhtarabbas909/"
+            url="https://www.linkedin.com/in/saadat-ali-0a4394348/"
             className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-400 to-blue-500 dark:text-transparent bg-gradient-to-br from-blue-400 to-blue-500"
           >
             Linked

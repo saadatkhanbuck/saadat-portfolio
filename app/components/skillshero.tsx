@@ -67,9 +67,9 @@ export default function SkillsHero() {
               className="mt-12 flex flex-wrap gap-12"
             >
               {[
-                { value: "13+", label: "Years" },
-                { value: "150+", label: "Projects" },
-                { value: "75+", label: "Stacks" },
+                { value: "2+", label: "Years experience since 2023" },
+                { value: "100+", label: "Projects" },
+                { value: "35+", label: "Stacks" },
               ].map((m) => (
                 <div key={m.label}>
                   <div className="text-3xl font-bold">{m.value}</div>
