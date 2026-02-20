@@ -3,14 +3,14 @@
 import { motion } from "motion/react";
 
 export default function SkillsHero() {
-//   const stack = [
-//     "React / Next.js",
-//     "TypeScript",
-//     "Node & APIs",
-//     "Databases",
-//     "System Design",
-//     "DevOps", 
-//   ];
+  //   const stack = [
+  //     "React / Next.js",
+  //     "TypeScript",
+  //     "Node & APIs",
+  //     "Databases",
+  //     "System Design",
+  //     "DevOps",
+  //   ];
 
   return (
     <section className="relative overflow-hidden py-36">
@@ -67,7 +67,7 @@ export default function SkillsHero() {
               className="mt-12 flex flex-wrap gap-12"
             >
               {[
-                { value: "2+", label: "Years experience since 2023" },
+                { value: "2+ yrs", label: "Experience Since 2023" },
                 { value: "100+", label: "Projects" },
                 { value: "35+", label: "Stacks" },
               ].map((m) => (
@@ -78,37 +78,34 @@ export default function SkillsHero() {
               ))}
             </motion.div>
           </div>
-
           {/* RIGHT */}
-          {/* RIGHT */}
-<motion.div
-  initial={{ opacity: 0, x: 60 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ delay: 0.2 }}
-  className="relative"
->
-  <div className="relative h-[600px] w-[600px] overflow-hidden rounded-2xl border shadow-2xl">
-    {/* video */}
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      className="absolute inset-0 h-full w-full object-cover"
-      src="https://cdn.dribbble.com/userupload/45868444/file/0bdb4d8303c9f8ac3ce1f1661d13d106.mp4" // apna video link
-    />
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            className="relative"
+          >
+            <div className="relative h-[600px] w-[600px] overflow-hidden rounded-2xl border shadow-2xl">
+              {/* video */}
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 h-full w-full object-cover"
+                src="https://cdn.dribbble.com/userupload/45868444/file/0bdb4d8303c9f8ac3ce1f1661d13d106.mp4" // apna video link
+              />
 
-    {/* dark overlay for readability */}
+              {/* dark overlay for readability */}
 
-
-    {/* floating content */}
-    <div className="relative z-10 flex h-full flex-col justify-between p-8 text-white">
-      {/* <div>
+              {/* floating content */}
+              <div className="relative z-10 flex h-full flex-col justify-between p-8 text-white">
+                {/* <div>
         <div className="text-sm text-neutral-700 opacity-80">Engineering</div>
         <div className="text-2xl text-neutral-600 font-semibold">Real World Systems</div>
       </div> */}
 
-      {/* <div className="space-y-4">
+                {/* <div className="space-y-4">
         {stack.map((item, i) => (
           <motion.div
             key={item}
@@ -130,13 +127,12 @@ export default function SkillsHero() {
           </motion.div>
         ))}
       </div> */}
-    </div>
-  </div>
+              </div>
+            </div>
 
-  {/* glow */}
-  <div className="absolute -right-10 -bottom-10 -z-10 h-56 w-56 rounded-full bg-neutral-400/20 blur-3xl" />
-</motion.div>
-
+            {/* glow */}
+            <div className="absolute -right-10 -bottom-10 -z-10 h-56 w-56 rounded-full bg-neutral-400/20 blur-3xl" />
+          </motion.div>
         </div>
       </div>
     </section>

@@ -96,9 +96,9 @@ export default function ProjectsHero() {
             >
               
               {[
-                { value: "150+", label: "Projects" },
-                { value: "99+", label: "Clients" },
-                { value: "13+ yrs", label: "Experience" },
+                { value: "100+", label: "Projects" },
+                { value: "50+", label: "Clients" },
+                { value: "2+ yrs", label: "Experience Since 2023" },
               ].map((item) => (
                 <div key={item.label}>
                   <p className="text-3xl font-semibold dark:text-white tracking-tight">

@@ -25,45 +25,45 @@ interface ServiceItem {
 const services: ServiceItem[] = [
   {
     icon: <FaLaptopCode size={35} />,
-    title: "Frontend Development",
+    title: "Dashboard Development",
     description:
-      "Expertise in React, Next.js, and Tailwind CSS to build responsive, interactive user interfaces.",
-    link: "/skills/#frontend",
+      "Building modern admin dashboards with charts, tables and dynamic data.",
+    link: "/skills/#dashboard",
   },
   {
     icon: <FaPenNib size={35} />,
-    title: "Backend Development",
+    title: "Frontend Development & Responsive Web Design",
     description:
-      "Develop scalable backend systems with Node.js, Express, and databases like MongoDB & PostgreSQL.",
-    link: "/skills/#backend",
+      "Building modern, responsive web applications using React, Next.js and TypeScript.Creating pixel-perfect layouts that work across all devices.",
+    link: "/skills/#frontend",
   },
   {
     icon: <FaShareAlt size={35} />,
-    title: "Full-Stack Development",
+    title: "UI Implementation",
     description:
-      "Integrating frontend and backend to build complete web applications with seamless functionality.",
-    link: "/skills/#fullstack",
+      "Converting Figma and design systems into real interactive interfaces.",
+    link: "/skills/#ui",
   },
   {
     icon: <FaBlog size={35} />,
-    title: "Software Engineering",
+    title: "Performance Optimization",
     description:
-      "Designing maintainable software solutions using best practices and modern architecture.",
-    link: "/skills/#softwareengineering",
+      "Optimizing speed, SEO and accessibility for better user experience.",
+    link: "/skills/#performance",
   },
   {
     icon: <FaTags size={35} />,
-    title: "Portfolio & Personal Projects",
+    title: "Modern UI Animations",
     description:
-      "Crafting portfolio websites and projects to showcase skills and achievements effectively.",
-    link: "/skills/#portfolio",
+      "Building smooth interactions using Framer Motion and modern CSS.",
+    link: "/skills/#animations",
   },
   {
     icon: <FaClipboardList size={35} />,
-    title: "Project Documentation",
+    title: "API Integration",
     description:
-      "Creating clear, concise documentation for code and projects to improve collaboration and maintainability.",
-    link: "/skills/#documentation",
+      "Connecting applications with REST APIs and external services.",
+    link: "/skills/#apiintegration",
   },
 ];
 
@@ -82,7 +82,8 @@ const OurServices: React.FC = () => {
           What I Can Do
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto">
-          These are some of the skills and technologies I have worked with and used in my projects.
+          These are some of the skills and technologies I have worked with and
+          used in my projects.
         </p>
       </div>
 
@@ -121,8 +122,12 @@ const OurServices: React.FC = () => {
                     {service.icon}
                   </motion.div>
 
-                  <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                  <p className="leading-relaxed text-sm">{service.description}</p>
+                  <h3 className="font-semibold text-lg mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="leading-relaxed text-sm">
+                    {service.description}
+                  </p>
                 </div>
 
                 {/* Read More */}
