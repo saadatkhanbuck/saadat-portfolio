@@ -7,10 +7,8 @@ import { PinContainer } from "@/components/ui/3d-pin";
 export default function TextPage() {
   return (
     <div className="flex flex-col items-center justify-center mt-20 px-4">
-
       {/* ===== TOP TEXT (IMAGE STYLE) ===== */}
       <div className="max-w-4xl mx-auto mb-14 text-left text-neutral-600 dark:text-neutral-400 text-base md:text-2xl leading-relaxed">
-        
         <p className="mb-4">
           Check out my{" "}
           <LinkPreview
@@ -24,14 +22,18 @@ export default function TextPage() {
             url="https://www.linkedin.com/in/akhtarabbas909/"
             className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-400 to-blue-500 dark:text-transparent bg-gradient-to-br from-blue-400 to-blue-500"
           >
-            Linked<span className=" text-lg pb-0 px-1 rounded-md text-white mx-0.5 my-0  bg-gradient-to-r from-blue-400 to-blue-600 ">in</span>
+            Linked
+            <span className=" text-lg pb-0 px-1 rounded-md text-white mx-0.5 my-0  bg-gradient-to-r from-blue-400 to-blue-600 ">
+              in
+            </span>
           </LinkPreview>{" "}
           to explore my projects and professional experience.
         </p>
 
         <p className="mb-4">
-          Discover my standout portfolio websites where I`ve delivered exceptional
-          UI/UX with Framer Motion and cutting-edge frontend development:
+          Discover my standout portfolio websites where I`ve delivered
+          exceptional UI/UX with Framer Motion and cutting-edge frontend
+          development:
         </p>
 
         <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -111,8 +113,11 @@ export default function TextPage() {
       </div> */}
 
       {/* ===== Animated Pin Section (AS IT IS) ===== */}
-      <div id="animatedpindemo" className="h-[40rem] w-full flex items-center justify-center">
-        <PinContainer title="/Akhtar Abbas" href="https://wa.me/923214829814">
+      <div
+        id="animatedpindemo"
+        className="h-[40rem] w-full flex items-center justify-center"
+      >
+        <PinContainer title="/saadat Ali" href="https://wa.me/923294811430">
           <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem]">
             <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
               WhatsApp Contact
@@ -126,7 +131,6 @@ export default function TextPage() {
           </div>
         </PinContainer>
       </div>
-
     </div>
   );
 }
