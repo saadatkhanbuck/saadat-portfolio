@@ -47,7 +47,7 @@ export default function TextPage() {
           </li>
           <li>
             <LinkPreview
-              url="https://packagingwriter.netlify.app/"
+              url="https://packagingindustry.vercel.app/"
               className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#154f86] to-[#2E8AE0] dark:text-transparent bg-gradient-to-br from-[#154f86] to-[#2E8AE0]"
             >
               Packaging Writer –
