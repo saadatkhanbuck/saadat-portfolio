@@ -62,7 +62,7 @@ export default function ContactHero() {
               className="mt-10 flex flex-col gap-4 sm:flex-row md:justify-start justify-center"
             >
               <Link
-                href="mailto:akhtar.abbas@huboweb.com"
+                href="mailto:saadatkhanbuk@gmail.com"
                 className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl border border-neutral-900 dark:border-white bg-neutral-900 px-8 py-3 font-medium text-white transition"
               >
                 <span className="absolute inset-0 translate-y-full bg-white transition duration-300 group-hover:translate-y-0" />
