@@ -45,7 +45,7 @@ export default function FAQPage() {
   };
 
   return (
-    <section className="relative w-full min-h-screen py-24 bg-gradient-to-b from-neutral-50 dark:from-neutral-950">
+    <section className="relative w-full min-h-screen py-24">
       {/* Hero / heading */}
       <div className="relative max-w-4xl mx-auto px-6 text-center mb-20">
         <h1 className="text-5xl md:text-6xl font-extrabold text-neutral-900 dark:text-white mb-4">

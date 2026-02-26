@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export default function TestimonialHero() {
   const testimonials = [
     {
-      text: "Akhtar delivered beyond expectations. Strong technical skills, pixel perfect design thinking, and fantastic communication. Would absolutely work again.",
+      text: "Saadat Ali delivered beyond expectations. Strong technical skills, pixel perfect design thinking, and fantastic communication. Would absolutely work again.",
       name: "Sarah Johnson",
       role: "Product Manager",
       initials: "SJ",
