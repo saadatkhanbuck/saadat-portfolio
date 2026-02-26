@@ -1,136 +1,107 @@
 "use client";
 import React from "react";
-import { motion } from "motion/react";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { PinContainer } from "@/components/ui/3d-pin";
 
 export default function TextPage() {
   return (
-    <div className="flex flex-col items-center justify-center mt-20 px-4">
-      {/* ===== TOP TEXT (IMAGE STYLE) ===== */}
-      <div className="max-w-4xl mx-auto mb-14 text-left text-neutral-600 dark:text-neutral-400 text-base md:text-2xl leading-relaxed">
-        <p className="mb-4">
-          Check out my{" "}
-          <LinkPreview
-            url="https://github.com/saadatkhanbuck"
-            className="text-neutral-700 font-bold"
-          >
-            GitHub profile
-          </LinkPreview>{" "}
-          and{" "}
-          <LinkPreview
-            url="https://www.linkedin.com/in/saadat-ali-0a4394348/"
-            className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-400 to-blue-500 dark:text-transparent bg-gradient-to-br from-blue-400 to-blue-500"
-          >
-            Linked
-            <span className=" text-lg pb-0 px-1 rounded-md text-white mx-0.5 my-0  bg-gradient-to-r from-blue-400 to-blue-600 ">
-              in
-            </span>
-          </LinkPreview>{" "}
-          to explore my projects and professional experience.
+    <section className="relative py-0 mb-5 px-4  md:px-6 overflow-hidden">
+      {/* SECTION TITLE */}
+      <div className="max-w-6xl mx-auto mb-16 md:mb-24 text-center md:text-left">
+        <p className="text-sm md:text-base tracking-widest uppercase text-neutral-500 mb-4">
+          04 / Portfolio Links
         </p>
 
-        <p className="mb-4">
-          Discover my standout portfolio websites where I`ve delivered
-          exceptional UI/UX with Framer Motion and cutting-edge frontend
-          development:
-        </p>
+        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight max-w-4xl mx-auto md:mx-0">
+          Where My{" "}
+          <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+            Work Lives
+          </span>
+        </h2>
+      </div>
 
-        <ul className="list-disc pl-6 mb-4 space-y-2">
-          <li>
+      {/* MAIN CONTENT GRID */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+        {/* LEFT TEXT */}
+        <div className="space-y-6 md:space-y-8 text-base md:text-lg leading-relaxed text-neutral-600 dark:text-neutral-400">
+          <p>
+            Explore my development journey on{" "}
             <LinkPreview
-              url="https://huboweb.com/"
-              className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#170080] to-blue-500 dark:text-transparent bg-gradient-to-br from-[#170080] to-blue-500"
+              url="https://github.com/saadatkhanbuck"
+              className="font-semibold text-black dark:text-white"
             >
-              Huboweb Technology Private Limited
+              https://GitHub.com
+            </LinkPreview>{" "}
+            and connect professionally via{" "}
+            <LinkPreview
+              url="https://www.linkedin.com/in/akhtarabbas909/"
+              className="font-semibold text-blue-500"
+            >
+              https://LinkedIn.com
             </LinkPreview>
-          </li>
-          <li>
-            <LinkPreview
-              url="https://packagingindustry.vercel.app/"
-              className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#154f86] to-[#2E8AE0] dark:text-transparent bg-gradient-to-br from-[#154f86] to-[#2E8AE0]"
-            >
-              Packaging Writer –
-            </LinkPreview>{" "}
-            Content Writing Excellence
-          </li>
-          <li>
-            <LinkPreview
-              url="https://ticketing-website-eta.vercel.app/"
-              className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-green-600 to-green-600 dark:text-transparent bg-gradient-to-br from-green-600 to-green-600"
-            >
-              Traviazo Ticketing –
-            </LinkPreview>{" "}
-            Premium Booking Experience
-          </li>
-        </ul>
+            .
+          </p>
 
-        <p>
-          These are my unique showcase projects featuring smooth animations,
-          modern design, and top-tier frontend craftsmanship!
-        </p>
-      </div>
+          <p>
+            I’ve built multiple high-performance platforms focused on clean
+            architecture, modern UI/UX, and scalable frontend systems.
+          </p>
 
-      {/* ===== LinkPreview Section (AS IT IS) ===== */}
-      {/* <div id="linkpreviewdemo" className="flex justify-center items-center flex-col">
-        <p className="text-neutral-500 dark:text-neutral-400 text-lg md:text-2xl max-w-3xl mx-auto mb-6">
-          Check out{" "}
-          <LinkPreview url="https://github.com/saadatkhanbuck" className="font-bold">
-            Saadat Ali on GitHub
-          </LinkPreview>{" "}
-          and{" "}
-          <LinkPreview
-            url="https://www.linkedin.com/in/saadat-ali-0a4394348/"
-            className="font-bold text-blue-400"
-          >
-            LinkedIn
-          </LinkPreview>{" "}
-          for his projects and professional work.
-        </p>
-
-        <p className="text-neutral-500 dark:text-neutral-400 text-lg md:text-2xl max-w-3xl mx-auto">
-          Visit{" "}
-          <LinkPreview
-            url="https://huboweb.com/"
-            className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
-          >
-            Huboweb Technology Private Limited,
-          </LinkPreview>{" "}
-          <LinkPreview
-            url="https://packagingwriter.netlify.app/"
-            className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-400 to-blue-500"
-          >
-            Packaging Writer Content Writing &
-          </LinkPreview>{" "}
-          <LinkPreview
-            url="https://ticketing-website-eta.vercel.app/"
-            className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-gray-600 to-gray-900"
-          >
-            Traviazo Ticketing Project
-          </LinkPreview>{" "}
-          software website to explore modern Tailwind and Framer Motion components.
-        </p>
-      </div> */}
-
-      {/* ===== Animated Pin Section (AS IT IS) ===== */}
-      <div
-        id="animatedpindemo"
-        className="h-[40rem] w-full flex items-center justify-center"
-      >
-        <PinContainer title="/saadat Ali" href="https://wa.me/923294811430">
-          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem]">
-            <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
-              WhatsApp Contact
-            </h3>
-            <div className="text-base !m-0 !p-0 font-normal">
-              <span className="text-slate-500">
-                Click here to start a WhatsApp chat.
-              </span>
+          <div className="space-y-4 md:space-y-6 pt-4 md:pt-6">
+            <div>
+              <h4 className="font-semibold text-lg md:text-xl mb-1">
+                Huboweb Technology
+              </h4>
+              <LinkPreview
+                url="https://huboweb.com/"
+                className="text-purple-500"
+              >
+                https://huboweb.com
+              </LinkPreview>
             </div>
-            <div className="flex flex-1 w-full rounded-lg bg-gradient-to-br from-[#170080] via-[#154f86] to-green-700" />
+
+            <div>
+              <h4 className="font-semibold text-lg md:text-xl mb-1">
+                Packaging Writer
+              </h4>
+              <LinkPreview
+                url="https://packagingindustry.vercel.app/"
+                className="text-blue-500"
+              >
+                https://packagingindustry.vercel.app
+              </LinkPreview>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-lg md:text-xl mb-1">
+                Traviazo Ticketing
+              </h4>
+              <LinkPreview
+                url="https://ticketing-website-eta.vercel.app/"
+                className="text-green-500"
+              >
+                https://ticketing-website-eta.vercel.app
+              </LinkPreview>
+            </div>
           </div>
-        </PinContainer>
+        </div>
+
+        {/* RIGHT FEATURE CARD */}
+        <div className="flex justify-center md:justify-end mt-10 md:mt-0">
+          <PinContainer title="Contact Me" href="https://wa.me/923294811430">
+            <div className="flex flex-col p-6 md:p-8 w-[20rem] md:w-[20rem] h-[26rem] md:h-[28rem]">
+              <h3 className="font-bold text-lg md:text-xl text-white mb-2 md:mb-3">
+                Let’s Work Together
+              </h3>
+              <p className="text-white/70 text-sm md:text-base">
+                Start a direct WhatsApp conversation for freelance,
+                collaboration or project discussion.
+              </p>
+              <div className="flex-1 mt-6 md:mt-8 rounded-xl bg-gradient-to-br from-purple-600 via-blue-600 to-green-600" />
+            </div>
+          </PinContainer>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
