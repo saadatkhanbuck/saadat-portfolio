@@ -68,8 +68,8 @@ export default function SkillsHero() {
             >
               {[
                 { value: "2+ yrs", label: "Experience Since 2023" },
-                { value: "100+", label: "Projects" },
-                { value: "35+", label: "Stacks" },
+                { value: "25+", label: "Projects" },
+                { value: "20+", label: "Stacks" },
               ].map((m) => (
                 <div key={m.label}>
                   <div className="text-3xl font-bold">{m.value}</div>

@@ -65,8 +65,8 @@ function Counter({ to, suffix = "" }: CounterProps) {
 export default function About() {
   const stats = [
     { number: 2, suffix: "+", label: "Years Experience Since 2023" },
-    { number: 100, suffix: "+", label: "Projects Completed" },
-    { number: 50, suffix: "+", label: "Happy Clients" },
+    { number: 25, suffix: "+", label: "Projects Completed" },
+    { number: 15, suffix: "+", label: "Happy Clients" },
     { number: "∞", label: "Learning Mode" },
   ];
 

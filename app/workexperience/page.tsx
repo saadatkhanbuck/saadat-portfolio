@@ -1,174 +1,140 @@
 "use client";
 
-import { LayoutDashboard, EarthLock, Code2, LucideIcon, ChevronDown, X } from "lucide-react";
-import { useState } from "react";
+import { motion } from "framer-motion";
 import ExperienceHero from "../components/experiencehero";
-import Work from "../components/work";
 import LeadershipImpact from "../components/leadership";
 
-/* =========================
-   TYPES
-========================= */
-
-type WorkExperience = {
-  icon: LucideIcon;
+interface Experience {
   role: string;
   company: string;
   duration: string;
-  highlights: string[];
-  skills: string[];
-};
+  description: string[];
+  tech: string[];
+}
 
-/* =========================
-   DATA
-========================= */
-
-const workExperienceData: WorkExperience[] = [
+const experiences: Experience[] = [
   {
-    icon: LayoutDashboard,
-    role: "Principal Software Engineer, Soliton Technologies",
-    company: "Persivia Inc.",
-    duration: "Nov 2019 - Dec 2026",
-    highlights: [
-      "Led development of scalable web, mobile, and desktop applications using Xamarin Forms, Python/Django, ASP.NET (Web Forms, MVC and Core) and ReactJS.",
-      "Designed and implemented RESTful APIs for seamless system integration.",
-      "Managed database design and optimization across MS SQL Server, PostgreSQL, and ClickHouse DB.",
-      "Integrated third-party controls (Telerik) to enhance UI/UX.",
-      "Developed front-end solutions with JavaScript, HTML5, CSS3, and ReactJS for responsive, dynamic interfaces.",
-      "Created and optimized stored procedures, triggers, and views for efficient database performance.",
-      "Collaborated with cross-functional teams, ensuring high-quality product delivery and Agile process adherence.",
-      "Mentored junior developers and conducted code reviews to promote best practices."
+    role: "Frontend Developer",
+    company: "HuboWeb Technology (Pvt.) Ltd — Lahore, Pakistan",
+    duration: "07/2024 – Ongoing",
+    description: [
+      "Developed responsive client websites and professional dashboards using React and Next.js.",
+      "Implemented modern frontend architectures with reusable components.",
+      "Integrated APIs and optimized frontend performance for complex applications.",
+      "Collaborated with senior developers and contributed to multiple live client projects.",
+      "Ensured pixel-perfect designs and maintained code quality for production environments.",
     ],
-    skills: ["React", "Tailwind CSS", "TypeScript", "REST APIs"]
+    tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "REST APIs"],
   },
   {
-    icon: EarthLock,
-    role: "Senior Software Engineer, FutureNow Technologies",
-    company: "FutureNow Technologies",
-    duration: "Jan 2016 - Oct 2019",
-    highlights: [
-      "Worked on ASP.NET Web Forms, ASP.NET MVC and ASP.NET Windows Forms to create web and Desktop applications using ADO.NET and Entity Framework.",
-      "Built and maintained RESTful APIs.",
-      "Developed console applications to support applications running live to update databases and scheduled jobs to send emails to respective recipients.",
-      "Optimized databases (SQL Server) including stored procedures and views.",
-      "Integrated Telerik controls to enhance UI/UX.",
-      "Implemented responsive front-end solutions with JavaScript, HTML5, CSS3.",
-      "Collaborated with teams to ensure high-quality software delivery and code best practices."
+    role: "Professional Web Development Training (MERN Stack)",
+    company: "Arfa Kareem Tower, Lahore",
+    duration: "2024 – 2025",
+    description: [
+      "Built full-stack applications using MongoDB, Express, React, and Node.js.",
+      "Created responsive and dynamic frontend interfaces.",
+      "Developed REST APIs and handled authentication systems.",
+      "Completed multiple real-world and portfolio projects.",
     ],
-    skills: ["Next.js", "Node.js", "PostgreSQL", "Tailwind CSS"]
+    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
   },
   {
-    icon: Code2,
-    role: "Software Engineer, Digital Logix",
-    company: "Digital Logix",
-    duration: "Feb 2014 - Dec 2015",
-    highlights: [
-      "Worked on ASP.NET Web Forms and ASP.NET Windows Forms to create web and Desktop applications using ADO.NET and Entity Framework.",
-      "Built and maintained RESTful APIs, WCF, and ASMX web services.",
-      "Optimized databases (SQL Server) including stored procedures and views.",
-      "Integrated Telerik and Infragistics controls to enhance UI/UX.",
-      "Implemented responsive front-end solutions with JavaScript, HTML5, CSS3.",
-      "Collaborated with teams."
+    role: "6-Month Diploma — Basic Computer & MS Office",
+    company: "Computer Training Institute",
+    duration: "2023 – 2024",
+    description: [
+      "Learned fundamental computer concepts and operating systems.",
+      "Gained hands-on experience with MS Word, Excel, and PowerPoint.",
+      "Developed documentation, presentation, and basic IT skills.",
     ],
-    skills: ["React", "Telerik", "TypeScript"]
+    tech: ["MS Word", "MS Excel", "PowerPoint"],
   },
 ];
 
-/* =========================
-   WORK EXPERIENCE SECTION
-========================= */
-
-export default function WorkExperienceSection() {
+export default function Work() {
   return (
     <>
-    <ExperienceHero/>
-    <Work/>
-    <LeadershipImpact/>
-    <section  className="max-w-6xl mx-auto my-20 px-4">
-      {/* Heading */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
-        <LayoutDashboard className="w-7 h-7 text-neutral-700 dark:text-white" />
-        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white text-center md:text-left">
-          Work Experience
-        </h2>
-        <div className="h-0.5 flex-1 max-w-30 mt-3 bg-gradient-to-r from-primary/70 via-primary/30 to-primary/10 rounded-full" />
-      </div>
+      <ExperienceHero />
+      <section className="relative py-28 px-4 md:px-12 overflow-hidden">
+        {/* Background Gradient Glow */}
+        <div className="absolute inset-0 -z-10 " />
+        <div className="absolute top-20 mt-20 ml-60 left-10 w-72 h-72 bg-white/20 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute bottom-20 mb-40 right-10 w-72 h-72 bg-gray-400/20 rounded-full blur-3xl -z-10"></div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-        {workExperienceData.map((exp, i) => (
-          <ModernWorkExperienceCard key={i} {...exp} />
-        ))}
-      </div>
-    </section>
+        {/* Header */}
+        <div className="max-w-4xl mx-auto text-center mb-24">
+          <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-black to-neutral-500 dark:from-white dark:to-neutral-400 bg-clip-text text-transparent">
+            Work Experience
+          </h2>
+          <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+            10+ years of building scalable systems, enterprise platforms and
+            performance-driven applications across multiple industries.
+          </p>
+        </div>
+
+        {/* Timeline */}
+        <div className="relative max-w-5xl mx-auto">
+          {/* Animated Vertical Line */}
+          <motion.div
+            initial={{ height: 0 }}
+            whileInView={{ height: "100%" }}
+            transition={{ duration: 5 }}
+            viewport={{ once: false }}
+            className="absolute left-5 md:left-1/2 md:-translate-x-1/2 w-[2px] bg-[#000000] dark:bg-white"
+          />
+
+          <div className="space-y-24">
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                viewport={{ once: true }}
+                className={`relative flex flex-col md:flex-row ${
+                  index % 2 === 0 ? "md:flex-row-reverse" : ""
+                }`}
+              >
+                {/* Dot */}
+                <div className="absolute left-5 md:left-1/2 md:-translate-x-1/2 w-5 h-5 bg-white dark:bg-black border-4 border-black dark:border-white rounded-full shadow-lg z-10" />
+
+                {/* Card */}
+                <div className="ml-14 md:ml-0 md:w-1/2">
+                  <div className="group relative p-8 rounded-3xl backdrop-blur-xl bg-white/60 dark:bg-white/5 border border-white/20 dark:border-white/10 shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                    <h3 className="text-2xl font-semibold mb-1">{exp.role}</h3>
+
+                    <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-6">
+                      {exp.company} • {exp.duration}
+                    </p>
+
+                    <ul className="space-y-3 text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed">
+                      {exp.description.map((item, i) => (
+                        <li key={i} className="flex gap-2">
+                          <span className="mt-2 w-2 h-2 bg-black dark:bg-white rounded-full flex-shrink-0"></span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Tech */}
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      {exp.tech.map((tech, i) => (
+                        <span
+                          key={i}
+                          className="text-xs px-4 py-1.5 rounded-full bg-black dark:bg-white text-white dark:text-black font-medium shadow-md"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <LeadershipImpact />
     </>
   );
-};
-
-const ModernWorkExperienceCard = ({
-  icon: Icon,
-  role,
-  company,
-  duration,
-  highlights,
-  skills,
-}: WorkExperience) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="relative group w-full">
-      {/* Glow / hover effect */}
-      <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-gray-500 via-blue-200 to-gray-300 opacity-20 blur-lg group-hover:opacity-60 transition duration-500 pointer-events-none" />
-
-      {/* Card */}
-      <div
-        className="relative bg-neutral-950 rounded-2xl p-5 border border-white/10 cursor-pointer
-        transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {/* Header */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="flex items-center gap-4 w-full">
-            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-primary to-white/10 text-white transition-transform group-hover:scale-110">
-              <Icon className="w-6 h-6 animate-pulse" />
-            </div>
-            <div className="flex-1">
-              <h3 className="text-lg font-bold text-white">{role}</h3>
-              <p className="text-sm text-neutral-400">
-                {company} • {duration}
-              </p>
-            </div>
-          </div>
-          <ChevronDown
-            className={`w-5 h-5 text-neutral-400 transition-transform mt-2 sm:mt-0 ${
-              isOpen ? "rotate-180" : ""
-            }`}
-          />
-        </div>
-
-        {/* Expandable Content */}
-        <div
-          className={`overflow-hidden transition-all duration-500 mt-4 ${
-            isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          <ul className="list-disc list-inside text-sm text-neutral-300 space-y-1">
-            {highlights.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {skills.map((skill, i) => (
-              <span
-                key={i}
-                className="text-xs px-2 py-1 bg-white/10 text-white rounded-full font-medium"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+}

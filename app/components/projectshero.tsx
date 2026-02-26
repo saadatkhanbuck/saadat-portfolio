@@ -13,12 +13,12 @@ export default function ProjectsHero() {
       {/* grid */}
       <div className="absolute inset-0 -z-10 " />
 
-      {/* glow accents */}
-     
       <div className="relative mx-auto flex min-h-screen max-w-7xl items-center px-6">
         <div className="grid w-full grid-cols-1 items-center gap-20 md:grid-cols-2">
+          
           {/* LEFT */}
           <div className="text-center md:text-left">
+            
             {/* badge */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -26,7 +26,7 @@ export default function ProjectsHero() {
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/70 px-4 py-1.5 text-sm font-medium text-neutral-600 shadow-sm backdrop-blur"
             >
               <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              Selected Work & Multiple Projects
+              Frontend Projects & Real Client Work
             </motion.div>
 
             {/* title */}
@@ -36,10 +36,10 @@ export default function ProjectsHero() {
               transition={{ delay: 0.1 }}
               className="text-5xl font-semibold leading-[1.05] dark:text-white tracking-tight md:text-7xl"
             >
-              Real products.
+              Building modern interfaces.
               <br />
               <span className="bg-gradient-to-r from-neutral-400 to-neutral-600 bg-clip-text text-transparent">
-                Built for real users.
+                Designed for performance.
               </span>
             </motion.h1>
 
@@ -50,9 +50,9 @@ export default function ProjectsHero() {
               transition={{ delay: 0.2 }}
               className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600"
             >
-              Explore applications I’ve designed and engineered using modern
-              technologies, scalable systems, and clean user experiences built
-              for growth.
+              I build responsive, high-performance frontend applications using 
+              React and Next.js. Focused on clean UI, scalable architecture, 
+              and smooth user experiences for real-world client projects.
             </motion.p>
 
             {/* CTA */}
@@ -94,11 +94,10 @@ export default function ProjectsHero() {
               transition={{ delay: 0.4 }}
               className="mt-12 flex gap-12 md:justify-start justify-center"
             >
-              
               {[
-                { value: "100+", label: "Projects" },
-                { value: "50+", label: "Clients" },
-                { value: "2+ yrs", label: "Experience Since 2023" },
+                { value: "15+", label: "Projects Completed" },
+                { value: "5+", label: "Live Client Deployments" },
+                { value: "2+ yrs", label: "Frontend Experience" },
               ].map((item) => (
                 <div key={item.label}>
                   <p className="text-3xl font-semibold dark:text-white tracking-tight">
@@ -117,12 +116,9 @@ export default function ProjectsHero() {
             transition={{ delay: 0.2 }}
             className="relative hidden md:flex justify-center"
           >
-            {/* glow */}
             <div className="absolute -inset-10 rounded-[40px] " />
 
-            {/* main window */}
             <div className="relative w-[560px] rounded-3xl border border-neutral-200 bg-white shadow-[0_40px_120px_rgba(0,0,0,0.15)]">
-              {/* browser */}
               <div className="flex items-center gap-2 border-b border-neutral-200 px-5 py-4">
                 <div className="h-3 w-3 rounded-full bg-red-400" />
                 <div className="h-3 w-3 rounded-full bg-yellow-400" />
@@ -130,7 +126,6 @@ export default function ProjectsHero() {
                 <div className="ml-4 h-2 w-40 rounded bg-neutral-200" />
               </div>
 
-              {/* UI */}
               <div className="h-[360px] bg-gradient-to-br from-neutral-50 to-neutral-100 p-8 space-y-5">
                 <div className="h-5 w-40 rounded bg-neutral-300" />
                 <div className="h-3 w-72 rounded bg-neutral-200" />
@@ -138,13 +133,12 @@ export default function ProjectsHero() {
               </div>
             </div>
 
-            {/* floating card */}
             <motion.div
               animate={{ y: [-6, 6, -6] }}
               transition={{ repeat: Infinity, duration: 4 }}
               className="absolute -left-12 top-10 w-44 rounded-xl border border-neutral-200 bg-white p-4 shadow-xl"
             >
-              <p className="text-xs font-semibold">Dashboard</p>
+              <p className="text-xs font-semibold">UI Dashboard</p>
               <div className="mt-2 h-2 w-full rounded bg-neutral-200" />
             </motion.div>
 
@@ -153,7 +147,7 @@ export default function ProjectsHero() {
               transition={{ repeat: Infinity, duration: 5 }}
               className="absolute -right-10 bottom-10 w-44 rounded-xl border border-neutral-200 bg-white p-4 shadow-xl"
             >
-              <p className="text-xs font-semibold">Analytics</p>
+              <p className="text-xs font-semibold">Frontend Analytics</p>
               <div className="mt-2 h-2 w-full rounded bg-neutral-200" />
             </motion.div>
           </motion.div>

@@ -1,135 +1,152 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { CirclePoundSterling } from "lucide-react"; // Lucide icon
 import PricingHero from "../components/pricinghero";
 import FAQPage from "../components/faq";
 
 type Plan = {
   name: string;
   price: string;
+  description: string;
   features: string[];
   featured?: boolean;
 };
 
 const plans: Plan[] = [
   {
-    name: "Hourly Plan",
-    price: "$15 - $20/hr",
+    name: "Hourly Collaboration",
+    price: "PKR 1,500 – 3,000 / hour",
+    description:
+      "Perfect for short-term tasks, bug fixes, or small feature updates.",
     features: [
-      "Flexible Hours",
-      "Priority Support",
-      "Pay As You Go",
-      "Access to All Features",
+      "Frontend Development (React / Next.js)",
+      "UI Fixes & Improvements",
+      "API Integration",
+      "Performance Optimization",
+      "Flexible Working Hours",
     ],
   },
   {
-    name: "Monthly Plan",
-    price: "$3k - $35k/mo",
+    name: "Monthly Partnership",
+    price: "PKR 50,000 – 150,000 / month",
+    description:
+      "Best for startups & businesses needing a dedicated frontend developer.",
     features: [
-      "Full-time Commitment",
-      "24/7 Support",
-      "Dedicated Account Manager",
-      "Advanced Analytics",
+      "Full-Time Frontend Development",
+      "Reusable Component Architecture",
+      "Responsive UI (All Devices)",
+      "SEO-Friendly Next.js Setup",
+      "Priority Communication",
+      "Ongoing Support & Maintenance",
     ],
     featured: true,
   },
   {
-    name: "Enterprise",
-    price: "$99/mo",
-    features: ["Unlimited Projects", "1 TB Storage", "Dedicated Support"],
+    name: "Project-Based",
+    price: "Custom Pricing (PKR 50k – 150k+)",
+    description: "For complete website or dashboard development projects.",
+    features: [
+      "Full Website Development",
+      "Admin Dashboard Development",
+      "Modern UI/UX Implementation",
+      "Deployment Assistance",
+      "Post-Launch Support",
+    ],
   },
 ];
 
 export default function PremiumPricing() {
   return (
     <>
-     <PricingHero/>
-     <FAQPage/>
-      <div className="py-24 flex flex-col items-center">
-        {/* Heading with Icon + Line */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex items-center gap-4 mb-6"
-        >
-          {/* Left Lucide Icon */}
-          <CirclePoundSterling className="w-8 h-8 mt-3 text-primary" />
+      <PricingHero />
+      <FAQPage />
+      <section className="py-24  transition-colors">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Heading */}
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-bold text-neutral-900 dark:text-white mb-6">
+              Pricing Plans
+            </h2>
+            <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto text-lg">
+              Transparent pricing designed for businesses and individuals who
+              need high-quality frontend development without compromise.
+            </p>
+          </div>
 
-          {/* Centered Text */}
-          <h2 className="text-5xl font-extrabold text-gray-900 dark:text-white text-center">
-            Our Pricing Plans
-          </h2>
-
-          {/* Right Decorative Line */}
-          <div className="h-0.5 w-30 mt-3 bg-gradient-to-r from-primary/70 via-primary/30 to-primary/10 rounded-full" />
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-gray-600 dark:text-gray-300 text-center mb-16 max-w-2xl"
-        >
-          Choose the plan that fits your business needs. Upgrade anytime or
-          cancel easily.
-        </motion.p>
-
-        {/* Pricing Cards */}
-        <div className="grid gap-12 md:grid-cols-3 w-full max-w-6xl px-6">
-          {plans.map((plan, index) => (
-            <motion.div
-              key={plan.name}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
-              whileHover={{ scale: 1.02 }}
-              className={`relative flex flex-col p-8 rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 backdrop-blur-xl ${
-                plan.featured
-                  ? "bg-gradient-to-tr from-blue-500 via-blue-400 to-gray-400 text-white shadow-[0_20px_60px_rgba(255,105,180,0.3)]"
-                  : "bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              }`}
-            >
-              {plan.featured && (
-                <span className="absolute top-0 right-4 -translate-y-1/2 bg-yellow-400 text-gray-900 font-bold px-3 py-1 rounded-full text-sm shadow-lg">
-                  Most Popular
-                </span>
-              )}
-
-              <h3 className="text-3xl font-bold mb-4">{plan.name}</h3>
-              <p className="text-4xl font-extrabold mb-6">{plan.price}</p>
-
-              <ul className="flex-1 mb-6 space-y-4">
-                {plan.features.map((feature, i) => (
-                  <motion.li
-                    key={i}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 * i }}
-                    className="flex items-center gap-3"
-                  >
-                    <span className="inline-block w-5 h-5 rounded-full bg-neutral-400 text-white flex-shrink-0 flex items-center justify-center">
-                      ✓
-                    </span>
-                    {feature}
-                  </motion.li>
-                ))}
-              </ul>
-
-              <button
-                className={`py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+          {/* Cards */}
+          <div className="grid md:grid-cols-3 gap-10">
+            {plans.map((plan, index) => (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.15 }}
+                whileHover={{ y: -8 }}
+                className={`relative rounded-3xl border p-10 transition-all duration-500 ${
                   plan.featured
-                    ? "bg-white text-purple-600 hover:bg-white/90"
-                    : "bg-blue-500 text-white hover:bg-blue-600"
+                    ? "border-neutral-900 dark:border-white bg-neutral-900 text-white"
+                    : "border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white"
                 }`}
               >
-                Get Started
-              </button>
-            </motion.div>
-          ))}
+                {plan.featured && (
+                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 text-xs font-semibold rounded-full bg-white text-black">
+                    Most Recommended
+                  </span>
+                )}
+
+                <h3 className="text-2xl font-semibold mb-4">{plan.name}</h3>
+
+                <p
+                  className={`text-3xl font-bold mb-4 ${
+                    plan.featured
+                      ? "text-white"
+                      : "text-neutral-900 dark:text-white"
+                  }`}
+                >
+                  {plan.price}
+                </p>
+
+                <p
+                  className={`mb-6 text-sm ${
+                    plan.featured
+                      ? "text-neutral-300"
+                      : "text-neutral-600 dark:text-neutral-400"
+                  }`}
+                >
+                  {plan.description}
+                </p>
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, i) => (
+                    <li
+                      key={i}
+                      className={`flex items-center gap-3 text-sm ${
+                        plan.featured
+                          ? "text-neutral-200"
+                          : "text-neutral-600 dark:text-neutral-400"
+                      }`}
+                    >
+                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <button
+                  className={`w-full py-3 rounded-xl font-medium transition ${
+                    plan.featured
+                      ? "bg-white text-black hover:bg-neutral-200"
+                      : "bg-neutral-900 text-white dark:bg-white dark:text-black hover:opacity-90"
+                  }`}
+                >
+                  Start Project
+                </button>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

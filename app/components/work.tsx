@@ -12,45 +12,46 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    role: "Principal Software Engineer",
-    company: "Persivia Inc. (Soliton Technologies)",
-    duration: "Nov 2019 – Dec 2026",
+    role: "Frontend Developer",
+    company: "HuboWeb Technology (Pvt.) Ltd — Lahore, Pakistan",
+    duration: "07/2024 – Ongoing",
     description: [
-      "Led scalable web, mobile, and enterprise system development.",
-      "Designed secure RESTful APIs for large-scale integrations.",
-      "Optimized MS SQL, PostgreSQL & ClickHouse databases.",
-      "Mentored engineers and enforced high coding standards."
+      "Developed responsive client websites and professional dashboards using React and Next.js.",
+      "Implemented modern frontend architectures with reusable components.",
+      "Integrated APIs and optimized frontend performance for complex applications.",
+      "Collaborated with senior developers and contributed to multiple live client projects.",
+      "Ensured pixel-perfect designs and maintained code quality for production environments.",
     ],
-    tech: ["React", "Tailwind", "TypeScript", "REST APIs"],
+    tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "REST APIs"],
   },
   {
-    role: "Senior Software Engineer",
-    company: "FutureNow Technologies",
-    duration: "Jan 2016 – Oct 2019",
+    role: "Professional Web Development Training (MERN Stack)",
+    company: "Arfa Kareem Tower, Lahore",
+    duration: "2024 – 2025",
     description: [
-      "Built enterprise web & desktop solutions using ASP.NET.",
-      "Developed REST APIs & scheduled automation systems.",
-      "Improved SQL Server performance and system reliability.",
+      "Built full-stack applications using MongoDB, Express, React, and Node.js.",
+      "Created responsive and dynamic frontend interfaces.",
+      "Developed REST APIs and handled authentication systems.",
+      "Completed multiple real-world and portfolio projects.",
     ],
-    tech: ["Next.js", "Node.js", "PostgreSQL", "Tailwind"],
+    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
   },
   {
-    role: "Software Engineer",
-    company: "Digital Logix",
-    duration: "Feb 2014 – Dec 2015",
+    role: "6-Month Diploma — Basic Computer & MS Office",
+    company: "Computer Training Institute",
+    duration: "2023 – 2024",
     description: [
-      "Developed ASP.NET applications & service-based architectures.",
-      "Built WCF, ASMX and optimized backend systems.",
-      "Enhanced UI using Telerik & Infragistics controls.",
+      "Learned fundamental computer concepts and operating systems.",
+      "Gained hands-on experience with MS Word, Excel, and PowerPoint.",
+      "Developed documentation, presentation, and basic IT skills.",
     ],
-    tech: ["React", "Telerik", "TypeScript"],
+    tech: ["MS Word", "MS Excel", "PowerPoint"],
   },
 ];
 
 export default function Work() {
   return (
     <section className="relative py-28 px-4 md:px-12 overflow-hidden">
-
       {/* Background Gradient Glow */}
       <div className="absolute inset-0 -z-10 " />
       <div className="absolute top-20 mt-20 ml-60 left-10 w-72 h-72 bg-white/20 rounded-full blur-3xl -z-10"></div>
@@ -69,7 +70,6 @@ export default function Work() {
 
       {/* Timeline */}
       <div className="relative max-w-5xl mx-auto">
-
         {/* Animated Vertical Line */}
         <motion.div
           initial={{ height: 0 }}
@@ -97,10 +97,7 @@ export default function Work() {
               {/* Card */}
               <div className="ml-14 md:ml-0 md:w-1/2">
                 <div className="group relative p-8 rounded-3xl backdrop-blur-xl bg-white/60 dark:bg-white/5 border border-white/20 dark:border-white/10 shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-
-                  <h3 className="text-2xl font-semibold mb-1">
-                    {exp.role}
-                  </h3>
+                  <h3 className="text-2xl font-semibold mb-1">{exp.role}</h3>
 
                   <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-6">
                     {exp.company} • {exp.duration}
@@ -126,7 +123,6 @@ export default function Work() {
                       </span>
                     ))}
                   </div>
-
                 </div>
               </div>
             </motion.div>
