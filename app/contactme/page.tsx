@@ -25,7 +25,7 @@ export default function ContactMe() {
          "service_64bjtdh",  // replace with your Service ID
         "template_98llm0c", // replace with your Template ID
         formRef.current,
-        "NJ9jlvWywzOkRkbw2" // Replace with your EmailJS Public Key
+        "7quzBC4i412OquWN0" // Replace with your EmailJS Public Key
       )
       .then(
         (result) => {
