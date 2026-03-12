@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function ProjectsHero() {
   return (
-    <section className="relative md:mt-10 min-h-screen overflow-hidden text-neutral-900 py-24 md:py-0">
+    <section className="relative overflow-hidden text-neutral-900 dark:text-white py-20 lg:py-15">
       {/* background */}
       <div className="absolute inset-0 -z-20" />
       <div className="absolute inset-0 -z-10" />
