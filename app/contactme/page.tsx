@@ -7,6 +7,7 @@ import { Mails } from "lucide-react";
 import { MacbookScrollDemo } from "../components/mackbook";
 import ContactHero from "../components/contacthero";
 import emailjs from "@emailjs/browser";
+import { ParallaxHeroImagesEdgeFocusDemo } from "../components/parallelheroimage";
 
 export default function ContactMe() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -45,6 +46,7 @@ export default function ContactMe() {
   return (
     <>
       <ContactHero />
+      <ParallaxHeroImagesEdgeFocusDemo/>
       <div className="mt-10">
         <MacbookScrollDemo />
 

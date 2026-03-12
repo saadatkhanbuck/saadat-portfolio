@@ -136,8 +136,8 @@ export default function PremiumPricing() {
                 <button
                   className={`w-full py-3 rounded-xl font-medium transition ${
                     plan.featured
-                      ? "bg-white text-black hover:bg-neutral-200"
-                      : "bg-neutral-900 text-white dark:bg-white dark:text-black hover:opacity-90"
+                      ? "bg-white text-black hover:bg-black dark:bg-black dark:text-white hover:text-white border border-white dark:hover:bg-white dark:hover:text-black  hover:border hover:border-neutral-300 dark:hover:border-white"
+                      : "bg-neutral-900 text-white hover:bg-white hover:text-black hover:border hover:border-neutral-300 dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white hover:opacity-90"
                   }`}
                 >
                   Start Project

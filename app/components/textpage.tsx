@@ -28,14 +28,14 @@ export default function TextPage() {
             Explore my development journey on{" "}
             <LinkPreview
               url="https://github.com/saadatkhanbuck"
-              className="font-semibold text-black dark:text-white"
+              className="font-semibold "
             >
               https://GitHub.com
             </LinkPreview>{" "}
             and connect professionally via{" "}
             <LinkPreview
               url="https://www.linkedin.com/in/akhtarabbas909/"
-              className="font-semibold text-blue-500"
+              className="font-semibold text-blue-400 dark:text-blue-400"
             >
               https://LinkedIn.com
             </LinkPreview>
@@ -54,7 +54,7 @@ export default function TextPage() {
               </h4>
               <LinkPreview
                 url="https://huboweb.com/"
-                className="text-purple-500"
+                className="text-purple-500 dark:text-purple-400"
               >
                 https://huboweb.com
               </LinkPreview>
@@ -66,7 +66,7 @@ export default function TextPage() {
               </h4>
               <LinkPreview
                 url="https://packagingindustry.vercel.app/"
-                className="text-blue-500"
+                className="text-[#148cc4] dark:text-[#148cc4]"
               >
                 https://packagingindustry.vercel.app
               </LinkPreview>
@@ -78,7 +78,7 @@ export default function TextPage() {
               </h4>
               <LinkPreview
                 url="https://ticketing-website-eta.vercel.app/"
-                className="text-green-500"
+                className="text-[#13bb21] dark:text-[#14c423]"
               >
                 https://ticketing-website-eta.vercel.app
               </LinkPreview>
