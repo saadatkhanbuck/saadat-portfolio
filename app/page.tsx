@@ -9,6 +9,7 @@ import TextPage from "./components/textpage";
 import About from "./components/about";
 import { ShowcasePage } from "./components/showcase";
 import HeroSection from "./hero/page";
+import { ParallaxHeroImagesEdgeFocusDemo } from "./components/parallelheroimage";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       {/* <AcademicJourney/> */}
       {/* <ContactMe /> */}
       <TextPage />
+      <ParallaxHeroImagesEdgeFocusDemo/>
     </>
   );
 }
