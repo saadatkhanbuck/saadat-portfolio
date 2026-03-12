@@ -1,19 +1,24 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+
+// ✅ Correct typing for icon
 type Skill = {
   name: string;
-  icon: React.ElementType;
+  icon: React.ComponentType<{ className?: string }>;
   category: string;
 };
+
+type Speed = "slow" | "medium" | "fast";
 
 type Props = {
   skills: Skill[];
   direction?: "left" | "right";
-  speed?: "slow" | "medium" | "fast";
+  speed?: Speed;
 };
 
-const SPEED_MAP = {
+// Explicit typing for SPEED_MAP
+const SPEED_MAP: Record<Speed, number> = {
   slow: 120,
   medium: 60,
   fast: 80,
@@ -30,7 +35,7 @@ export function InfiniteSkillsCards({
   const animationRef = useRef<number | null>(null);
   const pausedRef = useRef(false);
 
-  const step = SPEED_MAP[speed];
+  const step = SPEED_MAP[speed]; // ✅ TypeScript safe
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -88,7 +93,8 @@ export function InfiniteSkillsCards({
               key={idx}
               className="inline-block flex-shrink-0 w-56 p-4 border mb-2 mt-2 bg-card rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
             >
-              <div className="flex items-center gap-4 ">
+              <div className="flex items-center gap-4">
+                {/* ✅ Type-safe Icon */}
                 <Icon className="text-3xl text-primary dark:text-blue-400" />
                 <h4 className="font-semibold text-gray-900 dark:text-white">
                   {skill.name}
