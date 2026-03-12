@@ -7,7 +7,10 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen w-full overflow-hidden">
+    <section
+      id="home"
+      className="relative w-full overflow-visible md:overflow-hidden min-h-[110vh] md:min-h-screen py-20 md:py-0"
+    >
       {/* DARK / GRADIENT BLEND */}
       <div className="absolute inset-0 -z-30 " />
 
@@ -19,7 +22,7 @@ export default function HeroSection() {
 
       {/* CONTENT */}
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6">
-        <div className="grid w-full grid-cols-1 items-center gap-16 md:grid-cols-2">
+        <div className="grid w-full grid-cols-1 items-center gap-10 md:gap-16 md:grid-cols-2">
           {/* LEFT */}
           <div className="text-center md:text-left">
             {/* badge */}
@@ -148,20 +151,19 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3 }}
-            className="relative flex justify-center"
+            className="relative flex justify-center w-full max-w-[360px] sm:max-w-[420px] md:max-w-[480px] mx-auto"
           >
             {/* animated glow ring */}
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-              className="absolute h-[320px] w-[320px] md:h-[460px] md:w-[460px] rounded-full border border-dashed border-neutral-400"
+              className="absolute inset-0 rounded-full border border-dashed border-neutral-400"
             />
 
             {/* aura */}
-            <div className="absolute h-[340px] w-[340px] md:h-[480px] md:w-[480px] rounded-full bg-neutral-300/40 blur-3xl" />
-
+<div className="absolute inset-[-20px] rounded-full bg-neutral-300/40 blur-3xl" />
             {/* avatar */}
-            <div className="relative h-[260px] w-[260px] md:h-[360px] md:w-[360px] rounded-full bg-white p-0 shadow-2xl transition duration-500 hover:scale-105">
+            <div className="relative w-full aspect-square rounded-full bg-white shadow-2xl transition duration-500 hover:scale-105">
               <div className="relative h-full w-full overflow-hidden rounded-full">
                 <Image
                   src="/img/me3.jpeg"
@@ -172,15 +174,17 @@ export default function HeroSection() {
                 />
               </div>
             </div>
-            <div className="absolute -bottom-2 right-10 rounded-lg text-neutral-700 border bg-white px-3 py-1 text-xs font-semibold shadow-md">
+
+            {/* experience badge */}
+            <div className="absolute -bottom-3 right-6 sm:right-10 rounded-lg text-neutral-700 border bg-white px-3 py-1 text-[10px] sm:text-xs font-semibold shadow-md">
               Work Experience Since 2023
             </div>
 
-            {/* floating tech (glass) */}
+            {/* floating tech */}
             <motion.div
               animate={{ y: [-5, 5, -5] }}
               transition={{ repeat: Infinity, duration: 2 }}
-              className="absolute -left-8 top-10 rounded-lg border bg-white/80 text-black backdrop-blur px-3 py-1 text-xs shadow"
+              className="absolute -left-4 sm:-left-8 top-6 sm:top-10 rounded-lg border bg-white/80 text-black backdrop-blur px-2 py-1 text-[10px] sm:text-xs shadow"
             >
               Next.js
             </motion.div>
@@ -188,7 +192,7 @@ export default function HeroSection() {
             <motion.div
               animate={{ y: [5, -5, 5] }}
               transition={{ repeat: Infinity, duration: 3 }}
-              className="absolute -right-8 top-24 rounded-lg text-black border bg-white/80 backdrop-blur px-3 py-1 text-xs shadow"
+              className="absolute -right-4 sm:-right-8 top-16 sm:top-24 rounded-lg text-black border bg-white/80 backdrop-blur px-2 py-1 text-[10px] sm:text-xs shadow"
             >
               React js
             </motion.div>
@@ -196,7 +200,7 @@ export default function HeroSection() {
             <motion.div
               animate={{ y: [-5, 5, -5] }}
               transition={{ repeat: Infinity, duration: 4 }}
-              className="absolute left-10 -bottom-4 text-black rounded-lg border bg-white/80 backdrop-blur px-3 py-1 text-xs shadow"
+              className="absolute left-6 sm:left-10 -bottom-2 sm:-bottom-4 text-black rounded-lg border bg-white/80 backdrop-blur px-2 py-1 text-[10px] sm:text-xs shadow"
             >
               Node js
             </motion.div>
