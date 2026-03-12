@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Mail, MessageSquare } from "lucide-react";
+import { Globe3DDemo } from "./globeldemo";
 
 export default function ContactHero() {
   return (
@@ -27,7 +28,7 @@ export default function ContactHero() {
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/70 dark:border-neutral-700 dark:bg-neutral-800/60 backdrop-blur px-4 py-1.5 text-sm font-medium shadow"
           >
             <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-            Contact
+            Live Interactions & Global Reach
           </motion.div>
 
           {/* heading */}
@@ -93,50 +94,7 @@ export default function ContactHero() {
           transition={{ delay: 0.25 }}
           className="relative flex-1 flex justify-center"
         >
-          <div className="relative w-full max-w-md md:max-w-[520px] rounded-3xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 p-6 md:p-8 shadow-xl flex flex-col gap-6">
-            
-            {/* info cards */}
-            <div className="flex flex-col gap-4 md:gap-6">
-              {[
-                {
-                  title: "Project Inquiries",
-                  desc: "Let’s discuss timelines, scope and ideas.",
-                },
-                {
-                  title: "Partnerships",
-                  desc: "Collaboration, integrations & growth.",
-                },
-                {
-                  title: "General Questions",
-                  desc: "I’ll respond as soon as possible.",
-                },
-              ].map((item, i) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.12 }}
-                  className="rounded-xl border border-neutral-200 dark:border-neutral-700 p-4 md:p-5 shadow-md"
-                >
-                  <p className="text-sm font-semibold">{item.title}</p>
-                  <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* floating reply card */}
-            <motion.div
-              animate={{ y: [-6, 6, -6] }}
-              transition={{ repeat: Infinity, duration: 4 }}
-              className="absolute right-2 md:-right-10 top-2 md:-top-10 rounded-xl border border-neutral-900 dark:border-white bg-white dark:bg-neutral-700 px-3 py-2 shadow-md text-center"
-            >
-              <p className="text-xs font-semibold text-neutral-900 dark:text-white">
-                Avg. Reply
-              </p>
-              <p className="text-sm font-medium">24 Hours</p>
-            </motion.div>
-
-          </div>
+         <Globe3DDemo/>
         </motion.div>
 
       </div>
